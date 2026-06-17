@@ -1,1 +1,23 @@
-import { Section } from '@/components/ui';export default function Page(){return <main className="pt-24"><Section title="Frequently Asked Questions">{['How early should I book?','Do you travel outside Abuja?','Can I customize entertainment add-ons?','Do you offer DJ training certificates?'].map(q=><details className="mb-4 rounded-2xl bg-white/5 p-5" key={q}><summary className="font-bold text-primary">{q}</summary><p className="mt-3 text-white/70">Yes. Contact us for availability, planning, technical riders, and a tailored quotation.</p></details>)}</Section></main>}
+import { Section } from "@/components/ui";
+export default function Page() {
+  return (
+    <main className="pt-24">
+      <Section title="Frequently Asked Questions">
+        {[
+          "How early should I book?",
+          "Do you travel outside Abuja?",
+          "Can I customize entertainment add-ons?",
+          "Do you offer DJ training certificates?",
+        ].map((q) => (
+          <details className="mb-4 rounded-2xl bg-white/5 p-5" key={q}>
+            <summary className="font-bold text-primary">{q}</summary>
+            <p className="mt-3 text-white/70">
+              Yes. Contact us for availability, planning, technical riders, and
+              a tailored quotation.
+            </p>
+          </details>
+        ))}
+      </Section>
+    </main>
+  );
+}

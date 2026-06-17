@@ -1,26 +1,23 @@
-import type { NextAuthOptions } from 'next-auth';
-import Credentials from 'next-auth/providers/credentials';
-
+import type { NextAuthOptions } from "next-auth";
+import Credentials from "next-auth/providers/credentials";
 type AdminUser = {
   id: string;
   name: string;
   email: string;
-  role: 'Admin';
+  role: "Admin";
 };
-
 export const authOptions: NextAuthOptions = {
-  session: { strategy: 'jwt' },
+  session: { strategy: "jwt" },
   providers: [
     Credentials({
-      name: 'Admin Login',
+      name: "Admin Login",
       credentials: {
-        email: { label: 'Email', type: 'email' },
-        password: { label: 'Password', type: 'password' },
+        email: { label: "Email", type: "email" },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         const email = credentials?.email;
         const password = credentials?.password;
-
         if (
           email &&
           password &&
@@ -28,13 +25,12 @@ export const authOptions: NextAuthOptions = {
           password === process.env.ADMIN_PASSWORD
         ) {
           return {
-            id: 'admin',
-            name: 'Administrator',
+            id: "admin",
+            name: "Administrator",
             email,
-            role: 'Admin',
+            role: "Admin",
           } satisfies AdminUser;
         }
-
         return null;
       },
     }),
@@ -44,14 +40,12 @@ export const authOptions: NextAuthOptions = {
       if (user) {
         token.role = (user as AdminUser).role;
       }
-
       return token;
     },
     session({ session, token }) {
       if (session.user) {
         session.user.role = token.role;
       }
-
       return session;
     },
   },

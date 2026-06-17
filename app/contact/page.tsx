@@ -1,1 +1,34 @@
-import { Hero,Section } from '@/components/ui';export default function Page(){return <><Hero title="Contact Deejay Timz" subtitle="Phone, WhatsApp, email, social media, map location, and fast contact form."/><Section title="Get In Touch"><div className="grid gap-8 md:grid-cols-2"><div className="space-y-3 text-white/75"><p>Phone: +234 000 000 0000</p><p>WhatsApp: +234 000 000 0000</p><p>Email: bookings@deejaytimz.com</p><p>Social: Instagram • TikTok • YouTube</p><iframe title="Google Map" className="h-72 w-full rounded-3xl" src="https://maps.google.com/maps?q=Abuja&t=&z=11&ie=UTF8&iwloc=&output=embed"/></div><form action="/api/contact" method="post" className="space-y-4"><input name="name" placeholder="Name"/><input name="email" placeholder="Email"/><textarea name="message" placeholder="Message"/><button className="rounded-full bg-primary px-6 py-3 font-bold text-black">Send</button></form></div></Section></>}
+import { Hero, Section } from "@/components/ui";
+export default function Page() {
+  return (
+    <>
+      <Hero
+        title="Contact Deejay Timz"
+        subtitle="Phone, WhatsApp, email, social media, map location, and fast contact form."
+      />
+      <Section title="Get In Touch">
+        <div className="grid gap-8 md:grid-cols-2">
+          <div className="space-y-3 text-white/75">
+            <p>Phone: +234 000 000 0000</p>
+            <p>WhatsApp: +234 000 000 0000</p>
+            <p>Email: bookings@deejaytimz.com</p>
+            <p>Social: Instagram • TikTok • YouTube</p>
+            <iframe
+              title="Google Map"
+              className="h-72 w-full rounded-3xl"
+              src="https://maps.google.com/maps?q=Abuja&t=&z=11&ie=UTF8&iwloc=&output=embed"
+            />
+          </div>
+          <form action="/api/contact" method="post" className="space-y-4">
+            <input name="name" placeholder="Name" />
+            <input name="email" placeholder="Email" />
+            <textarea name="message" placeholder="Message" />
+            <button className="rounded-full bg-primary px-6 py-3 font-bold text-black">
+              Send
+            </button>
+          </form>
+        </div>
+      </Section>
+    </>
+  );
+}

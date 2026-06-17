@@ -1,2 +1,63 @@
-import { Button,GalleryGrid,Hero,PackageCards,Section,ServiceCards,Testimonials } from '@/components/ui';
-export default function Home(){return <><Hero title="Creating Unforgettable Event Experiences" subtitle="Professional DJ Services, Premium Sound Systems, Event Entertainment and DJ Training."><Button href="/booking">Book An Event</Button><Button href="/packages" alt>Explore Packages</Button></Hero><Section title="About Deejay Timz Entertainment"><p className="max-w-3xl text-xl text-white/70">We craft luxury event atmospheres with expert DJs, concert-grade sound, energetic performers, media coverage, and a practical DJ academy for the next generation of entertainers.</p></Section><Section title="Premium Services"><ServiceCards/></Section><Section title="Signature Packages"><PackageCards/></Section><Section title="Animated Impact"><div className="grid gap-5 md:grid-cols-4">{['500+ Events','10k+ Guests Moved','6 Core Services','24/7 Booking'].map(x=><div className="glass rounded-3xl p-8 text-3xl font-black text-primary" key={x}>{x}</div>)}</div></Section><Section title="Testimonials"><Testimonials/></Section><Section title="Gallery Preview"><GalleryGrid/></Section><Section title="Ready To Make Your Event Extraordinary?"><Button href="/booking">Start Booking</Button></Section></>}
+import {
+  Button,
+  GalleryGrid,
+  Hero,
+  PackageCards,
+  Section,
+  ServiceCards,
+  Testimonials,
+} from "@/components/ui";
+export default function Home() {
+  return (
+    <>
+      <Hero
+        title="Creating Unforgettable Event Experiences"
+        subtitle="Professional DJ Services, Premium Sound Systems, Event Entertainment and DJ Training."
+      >
+        <Button href="/booking">Book An Event</Button>
+        <Button href="/packages" alt>
+          Explore Packages
+        </Button>
+      </Hero>
+      <Section title="About Deejay Timz Entertainment">
+        <p className="max-w-3xl text-xl text-white/70">
+          We craft luxury event atmospheres with expert DJs, concert-grade
+          sound, energetic performers, media coverage, and a practical DJ
+          academy for the next generation of entertainers.
+        </p>
+      </Section>
+      <Section title="Premium Services">
+        <ServiceCards />
+      </Section>
+      <Section title="Signature Packages">
+        <PackageCards />
+      </Section>
+      <Section title="Animated Impact">
+        <div className="grid gap-5 md:grid-cols-4">
+          {[
+            "500+ Events",
+            "10k+ Guests Moved",
+            "6 Core Services",
+            "24/7 Booking",
+          ].map((x) => (
+            <div
+              className="glass rounded-3xl p-8 text-3xl font-black text-primary"
+              key={x}
+            >
+              {x}
+            </div>
+          ))}
+        </div>
+      </Section>
+      <Section title="Testimonials">
+        <Testimonials />
+      </Section>
+      <Section title="Gallery Preview">
+        <GalleryGrid />
+      </Section>
+      <Section title="Ready To Make Your Event Extraordinary?">
+        <Button href="/booking">Start Booking</Button>
+      </Section>
+    </>
+  );
+}
