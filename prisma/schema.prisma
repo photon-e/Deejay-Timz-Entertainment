@@ -1,0 +1,9 @@
+generator client { provider = "prisma-client-js" }
+datasource db { provider = "postgresql" url = env("DATABASE_URL") }
+enum Role { Admin Staff }
+enum Status { Pending Approved Rejected Completed Accepted }
+model User { id String @id @default(cuid()) name String? email String @unique password String role Role @default(Staff) }
+model Booking { id String @id @default(cuid()) name String email String phone String eventType String date DateTime location String guests Int package String notes String? status Status @default(Pending) createdAt DateTime @default(now()) }
+model Gallery { id String @id @default(cuid()) title String category String imageUrl String? videoUrl String? description String? createdAt DateTime @default(now()) }
+model AcademyApplication { id String @id @default(cuid()) name String email String phone String course String message String? status Status @default(Pending) createdAt DateTime @default(now()) }
+model Testimonial { id String @id @default(cuid()) name String role String review String rating Int createdAt DateTime @default(now()) }
