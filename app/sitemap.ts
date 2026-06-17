@@ -1,0 +1,1 @@
+import { site } from '@/lib/seo';export default function sitemap(){return['','services','packages','gallery','academy','booking','about','contact','faq','blog'].map(p=>({url:`${site.url}/${p}`,lastModified:new Date()}))}
