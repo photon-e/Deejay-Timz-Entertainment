@@ -1,0 +1,3 @@
+import './globals.css';import type { Metadata } from 'next';import { Header,Footer,WhatsApp } from '@/components/ui';import { site } from '@/lib/seo';
+export const metadata:Metadata={metadataBase:new URL(site.url),title:{default:site.name,template:`%s | ${site.name}`},description:site.description};
+export default function RootLayout({children}:{children:React.ReactNode}){const json={ '@context':'https://schema.org','@type':'EntertainmentBusiness',name:site.name,areaServed:'Lagos, Nigeria',url:site.url};return <html lang="en"><body><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(json)}}/><Header/>{children}<WhatsApp/><Footer/></body></html>}
