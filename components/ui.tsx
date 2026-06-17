@@ -42,8 +42,8 @@ export function Footer() {
       </div>
     </div>
     <div className="mx-auto flex max-w-7xl flex-col gap-4 border-t border-white/10 py-7 text-sm md:flex-row md:items-center md:justify-between">
-      <p><span className="font-bold text-white">Deejay Timz Entertainment Ltd</span> • Abuja, Nigeria</p>
-      <p>DJ in Abuja • Wedding DJ Abuja • Event DJ Nigeria • DJ Academy Nigeria</p>
+      <p><span className="font-bold text-white">Deejay Timz Entertainment Ltd</span> • Lagos, Nigeria</p>
+      <p>DJ in Lagos • Wedding DJ Lagos • Event DJ Nigeria • DJ Academy Nigeria</p>
     </div>
   </footer>;
 }
