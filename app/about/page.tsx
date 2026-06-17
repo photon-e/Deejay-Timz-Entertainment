@@ -1,1 +1,28 @@
-import { Hero,Section } from '@/components/ui';export default function Page(){return <><Hero title="About Our Company" subtitle="A modern Nigerian entertainment brand built on excellence, reliability, and unforgettable guest experiences."/><Section title="Mission, Vision & Team"><div className="grid gap-6 md:grid-cols-3">{['Mission: elevate every event with premium sound and performance.','Vision: become Africa’s benchmark for DJ entertainment and training.','Team: DJs, sound engineers, MCs, dancers, media creators, and academy mentors.'].map(x=><div className="glass rounded-3xl p-7" key={x}>{x}</div>)}</div><p className="mt-8 text-white/65">Certifications, safety documentation, and technical riders can be managed in the dashboard.</p></Section></>}
+import { Hero, Section } from "@/components/ui";
+export default function Page() {
+  return (
+    <>
+      <Hero
+        title="About Our Company"
+        subtitle="A modern Nigerian entertainment brand built on excellence, reliability, and unforgettable guest experiences."
+      />
+      <Section title="Mission, Vision & Team">
+        <div className="grid gap-6 md:grid-cols-3">
+          {[
+            "Mission: elevate every event with premium sound and performance.",
+            "Vision: become Africa’s benchmark for DJ entertainment and training.",
+            "Team: DJs, sound engineers, MCs, dancers, media creators, and academy mentors.",
+          ].map((x) => (
+            <div className="glass rounded-3xl p-7" key={x}>
+              {x}
+            </div>
+          ))}
+        </div>
+        <p className="mt-8 text-white/65">
+          Certifications, safety documentation, and technical riders can be
+          managed in the dashboard.
+        </p>
+      </Section>
+    </>
+  );
+}
